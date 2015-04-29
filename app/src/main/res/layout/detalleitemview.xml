@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/actiontoolbar"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/tool_bar_item"
+            layout="@layout/tool_bar">
+        </include>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/namelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Evento: "
+        android:layout_alignParentLeft="true"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/nameDetalleItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/namelabel"
+        android:textSize="25sp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#123456">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Item 1"
-        android:textColor="#ffffff"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
+    <ListView
+        android:id="@+id/listview_items"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</RelativeLayout>

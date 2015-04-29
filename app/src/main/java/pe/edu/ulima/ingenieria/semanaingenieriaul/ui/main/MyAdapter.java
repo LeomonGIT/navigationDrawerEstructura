@@ -1,6 +1,7 @@
 package pe.edu.ulima.ingenieria.semanaingenieriaul.ui.main;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import pe.edu.ulima.ingenieria.semanaingenieriaul.R;
-import pe.edu.ulima.ingenieria.semanaingenieriaul.ui.Item1.Fragment_item1;
+import pe.edu.ulima.ingenieria.semanaingenieriaul.ui.Items.Fragment_items;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
@@ -64,16 +65,23 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             Fragment fragment;
             int position = getPosition();
             String title="";
+            Bundle args = new Bundle();
             switch(position) {
                 default:
                 case 0:
-                    fragment = new Fragment_item1();
-                    //title = (String) get(R.string.title_section1);
+                    fragment = new Fragment_items();
+                    //posicion del perfil
                     break;
                 case 1:
-                    fragment = new Fragment_item1();
+                    fragment = new Fragment_items();
+                    args.putInt("key", position);
+                    break;
+                case 2:
+                    fragment = new Fragment_items();
+                    args.putInt("key", position);
                     break;
             }
+            fragment.setArguments(args);
             fm.beginTransaction()
                     .replace(R.id.container, fragment)
                     .commit();
